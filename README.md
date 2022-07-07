@@ -18,13 +18,27 @@ BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
 Then, enable I2S in device tree by uncommenting "#dtparam=i2s=on" in "/boot/config.txt".
 
 ```
-sudo nano /boot/config.txt
+$ sudo nano /boot/config.txt
 
 ```
 Add "snd-bcm2835" to the "/etc/modules",
 
 ```
-sudo nano /etc/modules
+$ sudo nano /etc/modules
 
 ```
+Reboot the Raspberry Pi by using,
+```
+$ sudo reboot
+
+```
+Then, make sure that modules are loaded
+
+```
+$ lsmod | grep snd 
+
+```
+You must get something like this
+
+
 will continue ...
